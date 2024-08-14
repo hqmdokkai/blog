@@ -25,3 +25,4 @@ Markdown cũng hỗ trợ danh sách:
 |-------|-------|
 | Dữ liệu 1 | Dữ liệu 2 |
 | Dữ liệu 3 | Dữ liệu 4 |
+Hiện tại web mới mở cửa nên hơi ít bài viết
