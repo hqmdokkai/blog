@@ -3,7 +3,7 @@
 ## Bài viết 1
 
 **Đây là nội dung của bài viết 1.**  
-Markdown hỗ trợ các kiểu định dạng văn bản như **in đậm** và *in nghiêng*. Bạn cũng có thể thêm liên kết như [đây](https://example.com).
+Markdown hỗ trợ các kiểu định dạng văn bản như **in đậm** và *in nghiêng*.
 
 ---
 
