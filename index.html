@@ -7,7 +7,7 @@
   <!-- Nhúng Bootstrap từ CDN -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Nhúng thư viện Marked.js để chuyển đổi Markdown thành HTML -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked@2.0.0/marked.min.js"></script>
 </head>
 <body>
   <div class="container mt-4">
@@ -18,12 +18,23 @@
     </div>
   </div>
   <script>
-    // Tải nội dung Markdown từ file và chuyển đổi thành HTML
-    fetch('posts.md')
-      .then(response => response.text())
-      .then(text => {
-        document.getElementById('content').innerHTML = marked(text);
-      });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Tải nội dung Markdown từ file và chuyển đổi thành HTML
+      fetch('posts.md')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text();
+        })
+        .then(text => {
+          document.getElementById('content').innerHTML = marked(text);
+        })
+        .catch(error => {
+          console.error('There has been a problem with your fetch operation:', error);
+        });
+    });
   </script>
 </body>
 </html>
+
